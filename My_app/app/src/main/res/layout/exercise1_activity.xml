@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    >
+
+    <TextView
+        android:id="@+id/lblTitr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First quarter"
+        android:textSize="30sp"
+        android:textColor="#F10A0A"
+        android:textStyle="bold"
+        >
+    </TextView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F10A0A"
+        android:layout_marginTop="10dp"
+        />
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~Start of Jan. month~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblMonthjan"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="JAN"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/jan_pic"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~End of Jan. month~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~Start of Feb. month~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblMonthfeb"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="FEB"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/feb_pic"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~End of Feb. month~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~Start of Mar. month~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblMonthmar"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Mar"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/mar_pic"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~End of Mar. month~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+    <!--~~~~~~~~~~~~~~~~~Section 2~~~~~~~~~~~~~~~~~~~~~-->
+
+
+    <TextView
+        android:id="@+id/lblTitr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second quarter"
+        android:textSize="30sp"
+        android:textColor="#F10A0A"
+        android:textStyle="bold"
+        >
+    </TextView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F10A0A"
+        android:layout_marginTop="10dp"
+        />
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~Start of Apr. month~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblMonthapr"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="APR"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/apr_pic"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~End of Apr. month~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~Start of May. month~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblMonthmay"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="MAY"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/may_pic"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~End of May. month~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~Start of Jun. month~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblMonthjun"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="JUN"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/jun_pic"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~End of Jun. month~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+</LinearLayout>
