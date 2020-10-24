@@ -9,15 +9,21 @@
         android:roundIcon="@mipmap/icon_luancher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Exercise1_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".KotlinActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login_activity">
+
         </activity>
+        <activity android:name=".exercise2_digikala_about" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".Exercise1_Activity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

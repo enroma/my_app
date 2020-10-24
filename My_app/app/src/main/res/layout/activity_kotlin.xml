@@ -1,0 +1,73 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/txtLoginTitr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Page"
+        android:textColor="#602DBA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="335dp"
+        />
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="please enter your name"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="please enter your Password"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click"
+            android:background="@color/colorPrimary"
+            />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Close"
+            android:background="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

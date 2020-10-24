@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercise2_digikala_about">
+
+    <ImageView
+        android:id="@+id/imgDigikalaTitr"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/digikala_icon" />
+
+    <TextView
+        android:id="@+id/btnEmail"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imgDigikalaTitr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="15sp"
+        android:text="@string/info_digikala_com"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorGray"
+        android:gravity="center"
+        android:drawableRight="@drawable/digikala_email_icon"
+        />
+
+
+    <TextView
+        android:id="@+id/txtCall"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/CallDigikala"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorGray"
+        android:gravity="center"
+        android:drawableRight="@drawable/digikala_call"
+        />
+
+    <TextView
+        android:id="@+id/txtDebug"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtCall"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/Debug"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorGray"
+        android:gravity="center"
+        android:drawableRight="@drawable/digikala_debug"
+        />
+
+    <ImageView
+        android:id="@+id/imgDigikalaicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/txtDebug"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/digikala_logo" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgDigikalaicon"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/txtDebug"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/digikala"
+        android:textSize="15sp"
+        android:textColor="@color/colorGray"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/imgDigikalaicon"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtDebug"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/version"
+        android:textSize="15sp"
+        android:textColor="@color/colorGray"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgDigikalaicon"
+        android:layout_centerHorizontal="true"
+        android:text="@string/copyright"
+        android:textSize="15sp"
+        android:textColor="@color/colorGray"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtName"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
+        android:text="@string/privacy"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlue"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtUse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVersion"
+        android:layout_alignEnd="@+id/txtVersion"
+        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
+        android:text="@string/use"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlue"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:verticalScrollbarPosition="right"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,9 +21,9 @@
         android:id="@+id/lblTitr1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First quarter"
+        android:text="@string/month1_titr"
         android:textSize="30sp"
-        android:textColor="#F10A0A"
+        android:textColor="@color/colorRed"
         android:textStyle="bold"
         >
     </TextView>
@@ -23,7 +31,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:background="#F10A0A"
+        android:background="@color/colorRed"
         android:layout_marginTop="10dp"
         />
 
@@ -39,10 +47,10 @@
             android:id="@+id/lblMonthjan"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="JAN"
+            android:text="@string/jan_month"
             android:textSize="25sp"
             android:textColor="#FFFFFF"
-            android:background="#2196F3"
+            android:background="@color/colorBlue"
             android:textStyle="bold"
             android:gravity="center"
             >
@@ -75,10 +83,10 @@
             android:id="@+id/lblMonthfeb"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="FEB"
+            android:text="@string/feb_month"
             android:textSize="25sp"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:textStyle="bold"
             android:gravity="center"
             >
@@ -112,10 +120,10 @@
             android:id="@+id/lblMonthmar"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="Mar"
+            android:text="@string/mar_month"
             android:textSize="25sp"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:textStyle="bold"
             android:gravity="center"
             >
@@ -145,9 +153,9 @@
         android:id="@+id/lblTitr2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second quarter"
+        android:text="@string/month2_titr"
         android:textSize="30sp"
-        android:textColor="#F10A0A"
+        android:textColor="@color/colorRed"
         android:textStyle="bold"
         >
     </TextView>
@@ -155,7 +163,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:background="#F10A0A"
+        android:background="@color/colorRed"
         android:layout_marginTop="10dp"
         />
 
@@ -171,10 +179,10 @@
             android:id="@+id/lblMonthapr"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="APR"
+            android:text="@string/apr_month"
             android:textSize="25sp"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:textStyle="bold"
             android:gravity="center"
             >
@@ -207,10 +215,10 @@
             android:id="@+id/lblMonthmay"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="MAY"
+            android:text="@string/may_month"
             android:textSize="25sp"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:textStyle="bold"
             android:gravity="center"
             >
@@ -244,10 +252,10 @@
             android:id="@+id/lblMonthjun"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="JUN"
+            android:text="@string/jun_month"
             android:textSize="25sp"
-            android:textColor="#FFFFFF"
-            android:background="#2196F3"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:textStyle="bold"
             android:gravity="center"
             >
@@ -273,3 +281,5 @@
 
 
 </LinearLayout>
+
+</ScrollView>

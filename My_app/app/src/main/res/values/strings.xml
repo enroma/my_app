@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">my_app</string>
-    <string name="string">سلام</string>
+    <string name="month1_titr">First quarter</string>
+    <string name="jan_month">JAN</string>
+    <string name="feb_month">FEB</string>
+    <string name="mar_month">Mar</string>
+    <string name="month2_titr">Second quarter</string>
+    <string name="apr_month">APR</string>
+    <string name="may_month">MAY</string>
+    <string name="jun_month">JUN</string>
+    <string name="info_digikala_com">info@digikala.com</string>
+    <string name="CallDigikala">تماس با دیجی کالا</string>
+    <string name="Debug">گزارش مشکلات اپلیکیشن</string>
+    <string name="digikala">دیجی کالا</string>
+    <string name="version">نسخه ۱.۹.۳</string>
+    <string name="copyright">کلیه حقوق نزد دیجی کالا محفوظ است.</string>
+    <string name="privacy">حریم خصوصی</string>
+    <string name="use">شرایط استفاده</string>
 </resources>
