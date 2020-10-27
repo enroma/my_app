@@ -16,4 +16,6 @@
     <string name="copyright">کلیه حقوق نزد دیجی کالا محفوظ است.</string>
     <string name="privacy">حریم خصوصی</string>
     <string name="use">شرایط استفاده</string>
+    <string name="RandomNum">Number</string>
+    <string name="dice">Dice</string>
 </resources>
