@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/graylight"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="405dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:background="@drawable/gradient"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:src="@drawable/man"
+                    />
+
+                <!-- Name report -->
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="name"
+                    android:textColor="@color/WhiteColor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <!-- Mobile report -->
+                <TextView
+                    android:id="@+id/txtMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Mobile"
+                    android:textSize="25sp"
+                    android:textColor="@color/graylight"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Age/NN/Work report -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="275dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <!-- Age report -->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_age"
+                            android:textSize="15sp"
+                            />
+                        <TextView
+                            android:id="@+id/txtAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="age"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/startblue"
+                            />
+                    </LinearLayout>
+                    <!-- Work report -->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_work"
+                            android:textSize="15sp"
+                            />
+                        <TextView
+                            android:id="@+id/txtWork"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="work"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/startblue"
+                            />
+                    </LinearLayout>
+                    <!-- NN report -->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_NN"
+                            android:textSize="15sp"
+                            />
+                        <TextView
+                            android:id="@+id/txtNnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NNumer"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/startblue"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <!-- Email report -->
+            <TextView
+                android:id="@+id/txtEmail"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/Profile_edit_size"
+                android:text="Email"/>
+
+            <!-- Education report -->
+            <TextView
+                android:id="@+id/txtEducation"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/Profile_edit_size"
+                android:text="Education"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
