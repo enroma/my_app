@@ -21,6 +21,7 @@ public class Login_activity extends AppCompatActivity {
 
         Toast.makeText(Login_activity.this,"Welcome to Android Class", Toast.LENGTH_LONG).show();
 
+
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

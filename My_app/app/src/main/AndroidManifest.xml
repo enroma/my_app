@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/icon_luancher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TasActivity">
+        <activity android:name=".ProfileEdit"></activity>
+        <activity android:name=".Home_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".KotlinActivity">
-
-        </activity>
-        <activity android:name=".Login_activity"></activity>
-        <activity android:name=".exercise2_digikala_about"></activity>
+        <activity android:name=".TasActivity"></activity>
+        <activity android:name=".KotlinActivity" />
+        <activity android:name=".Login_activity" />
+        <activity android:name=".exercise2_digikala_about" />
         <activity android:name=".Exercise1_Activity" />
         <activity android:name=".MainActivity" />
     </application>

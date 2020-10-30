@@ -18,4 +18,5 @@
     <string name="use">شرایط استفاده</string>
     <string name="RandomNum">Number</string>
     <string name="dice">Dice</string>
+    <string name="btnAbout">About us</string>
 </resources>
