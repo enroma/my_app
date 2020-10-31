@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.isiran.my_app">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon_luancher"
@@ -9,15 +13,18 @@
         android:roundIcon="@mipmap/icon_luancher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileEdit"></activity>
-        <activity android:name=".Home_Activity">
+        <activity android:name=".ImplicitIntent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TasActivity"></activity>
+        <activity android:name=".ProfileEdit" />
+        <activity android:name=".Home_Activity">
+
+        </activity>
+        <activity android:name=".TasActivity" />
         <activity android:name=".KotlinActivity" />
         <activity android:name=".Login_activity" />
         <activity android:name=".exercise2_digikala_about" />
