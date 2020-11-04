@@ -16,4 +16,5 @@
     <string name="home_age">سن</string>
     <string name="home_work">شغل</string>
     <string name="home_NN">کد ملی</string>
+    <string name="ValidationString">آیا اطلاعات وارد شده صحیح است؟</string>
 </resources>

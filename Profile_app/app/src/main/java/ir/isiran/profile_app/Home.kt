@@ -1,8 +1,10 @@
 package ir.isiran.profile_app
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
@@ -19,6 +21,8 @@ class Home : AppCompatActivity() {
         val txtAge = findViewById<TextView>(R.id.txtAge)
         val txtMobile = findViewById<TextView>(R.id.txtMobile)
         val txtEmail = findViewById<TextView>(R.id.txtEmail)
+        val btnOK = findViewById<ImageButton>(R.id.btnOK)
+        val btnNotOK = findViewById<ImageButton>(R.id.btnNotOK)
 
         val intent = intent
         val nameRecieved = intent.getStringExtra("Name")
@@ -37,6 +41,18 @@ class Home : AppCompatActivity() {
         txtMobile.text = mobileRecieved
         txtEmail.text = emailRecieved
 
+
+        btnOK.setOnClickListener {
+            intent.putExtra("Report" , "اطلاعات وارد شده صحیح می باشد.")
+            setResult(Activity.RESULT_OK,intent)
+            finish() //important
+        }
+
+        btnNotOK.setOnClickListener {
+            intent.putExtra("Report" , "اطلاعات وارد شده صحیح نمی باشد. دوباره تلاش کنید.")
+            setResult(Activity.RESULT_OK,intent)
+            finish() //important
+        }
 
     }
 }

@@ -1,12 +1,10 @@
 package ir.isiran.profile_app
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.ImageView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +41,18 @@ class MainActivity : AppCompatActivity() {
             home_intent.putExtra("Mobile",mobile)
             home_intent.putExtra("Email",email)
 
-            startActivity(home_intent)
+            startActivityForResult(home_intent,150)
         }
-
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == 150){
+            if(resultCode == Activity.RESULT_OK){
+                val result : String? = data?.getStringExtra("Report") //safe call
+                Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 }
