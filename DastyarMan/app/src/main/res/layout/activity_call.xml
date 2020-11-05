@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center|top"
+        android:orientation="vertical"
+        tools:context=".Call">
+
+        <ImageView
+            android:id="@+id/imgHeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nav_menu_header_bg"
+            />
+
+        <TextView
+            android:id="@+id/txtTitr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-70dp"
+            android:layout_below="@+id/imgHeaderView"
+            android:text="شماره مورد نظر را وارد نمایید:"
+            android:textSize="25sp"
+            android:textColor="@color/WhiteColor"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/RedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/imgHeaderView"
+            android:background="@color/RedColor"
+            />
+
+        <EditText
+            android:id="@+id/edtCallNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_below="@+id/imgHeaderView"
+            android:hint="+98 9xx xxx xxxx"
+            android:textSize="30sp"
+            android:inputType="phone"
+            android:textColor="@color/WhiteColor"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/RedLayout"
+            android:layout_marginTop="120dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:padding="30dp"
+            android:src="@drawable/call_btn"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

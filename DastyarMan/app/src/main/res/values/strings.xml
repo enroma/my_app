@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DastyarMan</string>
+    <string name="HomeName">سلام مهدی شیرازی!</string>
+    <string name="Nnumber_group">کد ملی :</string>
+    <string name="Nnumber">۰۴۳۰۰۲۲۱۳۲</string>
+    <string name="Education">کارشناسی ارشد</string>
+    <string name="education_group">مدرک تحصیلی :</string>
+    <string name="work">دانشجو</string>
+    <string name="work_group">شغل :</string>
+    <string name="age">29</string>
+    <string name="age_group">سن :</string>
+    <string name="mobile_group">شماره تلفن همراه :</string>
+    <string name="mobile">۰۹۱۲۱۱۱۱۱۱۱</string>
+    <string name="email">mehhdimehhdi@gmail.com</string>
+    <string name="email_group">آدرس ایمیل :</string>
+    <string name="Name">مهدی شیرازی</string>
+    <string name="home_age">سن</string>
+    <string name="home_work">شغل</string>
+    <string name="home_NN">کد ملی</string>
+    <string name="ValidationString">آیا اطلاعات وارد شده صحیح است؟</string>
+</resources>
