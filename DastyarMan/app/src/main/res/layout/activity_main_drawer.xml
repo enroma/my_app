@@ -29,6 +29,16 @@
 
         </androidx.appcompat.widget.Toolbar>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="موارد پیشنهادی برای شما"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/more_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -44,6 +54,18 @@
             android:layout_marginTop="20dp"
             android:background="@color/RedColor"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="جدیدترین رویدادها"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/more_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

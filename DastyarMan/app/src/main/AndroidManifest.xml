@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DastyarMan">
+        <activity android:name=".Detail"></activity>
         <activity android:name=".Main_Drawer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,9 +28,7 @@
         <activity android:name=".SMS" />
         <activity android:name=".Call" />
         <activity android:name=".Profile" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

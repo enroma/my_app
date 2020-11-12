@@ -1,17 +1,36 @@
 package ir.isiran.my_app
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import java.awt.font.TextAttribute
 
-class RecyclerAdapter(val mylist: ArrayList<String>):RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
+//class RecyclerAdapter(val mylist: ArrayList<String>):RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
+class RecyclerAdapter(val mylist: List<ElementItems>):RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
 
-    class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val txtRecyclerView = itemView.findViewById<TextView>(R.id.txtRecycleTitr)
+
+        class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        val txtRecyclerTitr = itemView.findViewById<TextView>(R.id.txtRecycleTitr)
+        val txtRecyclerDesc = itemView.findViewById<TextView>(R.id.txtRecycleText)
+        val imgRecyclerImage = itemView.findViewById<ImageView>(R.id.imgRecycleLogo)
+        val layout = itemView.findViewById<LinearLayout>(R.id.ItemLayout)
+        init{
+            layout.setOnClickListener(){
+                val position = adapterPosition
+                Toast.makeText(itemView.context, "Item number = "+position, Toast.LENGTH_LONG).show()
+                val intent = Intent(itemView.context,MoreActivity::class.java)
+                itemView.context.startActivity(intent)
+
+            }
+
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
@@ -38,8 +57,14 @@ class RecyclerAdapter(val mylist: ArrayList<String>):RecyclerView.Adapter<Recycl
 
 
 
-        holder.txtRecyclerView.text = mylist[position]
 
+      //  holder.txtRecyclerTitr.text = mylist[position]
+
+
+        val currentItem = mylist[position]
+        holder.txtRecyclerTitr.text = currentItem.title
+        holder.txtRecyclerDesc.text = currentItem.desc
+        holder.imgRecyclerImage.setImageResource(currentItem.img)
         }
 
     override fun getItemCount(): Int {
