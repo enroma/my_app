@@ -13,15 +13,18 @@
         android:roundIcon="@mipmap/icon_luancher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MoreActivity"></activity>
-        <activity android:name=".RecycleView">
+        <activity android:name=".SharePreference">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DrawerActivity"></activity>
+        <activity android:name=".MoreActivity" />
+        <activity android:name=".RecycleView">
+
+        </activity>
+        <activity android:name=".DrawerActivity" />
         <activity android:name=".ImplicitIntent" />
         <activity android:name=".ProfileEdit" />
         <activity android:name=".Home_Activity" />

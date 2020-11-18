@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,15 +21,26 @@ class Main_Drawer : AppCompatActivity() {
 
         val imgMenu=findViewById<ImageView>(R.id.imgMenu)
         val drawer=findViewById<DrawerLayout>(R.id.drawer)
+        val txtName = findViewById<TextView>(R.id.txtName)
+
+        txtName.setText("سلام " + (PreferenceManager.getDefaultSharedPreferences(this).getString("Name","مهدی شیرازی")) + " عزیز!")
+
         imgMenu.setOnClickListener(View.OnClickListener {
             drawer.openDrawer(GravityCompat.END)
         })
 
 
+        val imgProfile = findViewById<ImageView>(R.id.imgProfile)
         val txtProfile = findViewById<TextView>(R.id.txtProfile)
         val txtCall = findViewById<TextView>(R.id.txtCall)
         val txtSMS = findViewById<TextView>(R.id.txtSMS)
         val txtCamera = findViewById<TextView>(R.id.txtCamera)
+
+
+        imgProfile.setOnClickListener(){
+            val show_profile_intent: Intent = Intent(this,ShowProfile::class.java)
+            startActivity(show_profile_intent)
+        }
 
 
         txtProfile.setOnClickListener(){
