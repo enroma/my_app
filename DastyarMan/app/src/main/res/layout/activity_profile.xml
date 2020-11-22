@@ -65,6 +65,30 @@
                 android:background="@color/RedColor"
                 android:src="@drawable/ok" />
 
+            <ImageButton
+                android:id="@+id/btnOKSQL"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/btnOK"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:tooltipText="SQL Save"
+                android:background="@color/RedColor"
+                android:src="@drawable/ok" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SQL Save:"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@+id/btnOKSQL"
+                android:layout_below="@id/btnNotOK"
+                android:layout_marginRight="-16dp"
+                android:layout_marginTop="20dp"
+                />
+
             <EditText
                 android:id="@+id/edtName"
                 android:layout_width="wrap_content"

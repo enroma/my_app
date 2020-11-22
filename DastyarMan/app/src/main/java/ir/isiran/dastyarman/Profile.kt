@@ -18,6 +18,7 @@ class Profile : AppCompatActivity() {
 
         val btnOk = findViewById<ImageButton>(R.id.btnOK)
         val btnNotOk = findViewById<ImageButton>(R.id.btnNotOK)
+        val btnOKSQL = findViewById<ImageButton>(R.id.btnOKSQL)
 
         val edtName = findViewById<EditText>(R.id.edtName)
         val edtNNumber = findViewById<EditText>(R.id.edtNnumber)
@@ -27,6 +28,8 @@ class Profile : AppCompatActivity() {
         val edtMobile = findViewById<EditText>(R.id.edtMobile)
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
 
+        val database=SQLiteHelper(this,"ProfileDB",null,1)
+
         edtName.setText(LoadData("Name","مهدی شیرازی"))
         edtNNumber.setText(LoadData("Number","کد ملی"))
         edtEducation.setText(LoadData("Education","تحصیلات"))
@@ -34,8 +37,6 @@ class Profile : AppCompatActivity() {
         edtAge.setText(LoadData("Age","سن"))
         edtMobile.setText(LoadData("Mobile","موبایل"))
         edtEmail.setText(LoadData("Email","ایمیل"))
-
-
 
         val home_intent = intent
 
@@ -48,6 +49,8 @@ class Profile : AppCompatActivity() {
             val mobile : String = edtMobile.text.toString()
             val email : String = edtEmail.text.toString()
 
+
+
             SendDetail(home_intent,"Name",name)
             SendDetail(home_intent,"Number",nnumber)
             SendDetail(home_intent,"Education",education)
@@ -55,6 +58,7 @@ class Profile : AppCompatActivity() {
             SendDetail(home_intent,"Age",age)
             SendDetail(home_intent,"Mobile",mobile)
             SendDetail(home_intent,"Email",email)
+
             home_intent.putExtra("Report" , "اطلاعات وارد شده اصلاح شد.")
             setResult(Activity.RESULT_OK,intent)
             finish() //important
@@ -64,6 +68,19 @@ class Profile : AppCompatActivity() {
             home_intent.putExtra("Report" , "اصلاحی انجام نشد.")
             setResult(Activity.RESULT_CANCELED,intent)
             finish() //important
+        }
+
+        btnOKSQL.setOnClickListener(){
+            val name : String = edtName.text.toString()
+            val nnumber : String = edtNNumber.text.toString()
+            val education : String = edtEducation.text.toString()
+            val work : String = edtWork.text.toString()
+            val age : String = edtAge.text.toString()
+            val mobile : String = edtMobile.text.toString()
+            val email : String = edtEmail.text.toString()
+
+            database.InsertData(name, nnumber,education,work,age,mobile,email)
+            Toast.makeText(this,"اطلاعات در SQL ذخیره گردید",Toast.LENGTH_SHORT).show()
         }
     }
 
