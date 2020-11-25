@@ -35,6 +35,7 @@ class Main_Drawer : AppCompatActivity() {
         val txtCall = findViewById<TextView>(R.id.txtCall)
         val txtSMS = findViewById<TextView>(R.id.txtSMS)
         val txtCamera = findViewById<TextView>(R.id.txtCamera)
+        val txtPraytime = findViewById<TextView>(R.id.txtPrayTime)
 
 
         imgProfile.setOnClickListener(){
@@ -58,11 +59,14 @@ class Main_Drawer : AppCompatActivity() {
             startActivity(sms_intent)
         }
 
-
-
         txtCamera.setOnClickListener() {
             val camera_intent = Intent(this,Camera::class.java)
             startActivity(camera_intent)
+        }
+
+        txtPraytime.setOnClickListener() {
+            val pray_intent = Intent(this,http_url_connection::class.java)
+            startActivity(pray_intent)
         }
 
         // --------Recycle View -------

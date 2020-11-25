@@ -40,6 +40,7 @@ class SQLiteHelper(context : Context? , name : String? , factory : SQLiteDatabas
         var result=""
         val db=this.readableDatabase
         val data:Cursor=db.rawQuery(Read_Table,null)
+
         while (data.moveToNext()){
             result+=result+data.getString(0)+"\n"
         }

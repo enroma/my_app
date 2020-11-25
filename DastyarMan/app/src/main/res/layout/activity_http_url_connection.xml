@@ -1,9 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightBlue"
     tools:context=".http_url_connection">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imgPrayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pray"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/imgTitr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اوقات شرعی به وقت"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/imgPrayHeader"
+        android:layout_marginTop="-100dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <EditText
+        android:id="@+id/edtCityname"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Tehran"
+        android:hint="نام شهر"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_below="@+id/imgTitr1"
+        android:layout_marginLeft="50dp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow_right_icon"
+        android:background="@color/lightBlue"
+        android:layout_toRightOf="@+id/edtCityname"
+        android:layout_below="@+id/imgTitr1"
+        />
+
+    <TextView
+        android:id="@+id/txtFajr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--   :    اذان صبح"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/imgPrayHeader"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txtSunrise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--   :    طلوع آفتاب"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/txtFajr"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txtDhuhr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--   :    اذان ظهر"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/txtSunrise"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txtMaghrib"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--   :    اذان مغرب"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/txtDhuhr"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txtSunset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--   :    غروب آفتاب"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/txtMaghrib"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txtMidnight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--   :    نیمه شب"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/txtSunset"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        />
+
+</RelativeLayout>
