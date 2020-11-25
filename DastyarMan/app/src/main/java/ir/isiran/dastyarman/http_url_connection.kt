@@ -2,15 +2,28 @@ package ir.isiran.dastyarman
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import com.google.gson.Gson
+import com.loopj.android.http.AsyncHttpClient
+import com.loopj.android.http.JsonHttpResponseHandler
+import cz.msebera.android.httpclient.Header
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
+
+public var FajrResult = "--:--"
+public var SunriseResult = "--:--"
+public var DhuhrResult = "--:--"
+public var MaghribResult = "--:--"
+public var SunsetResult = "--:--"
+public var MidnightResult = "--:--"
+
 
 class http_url_connection : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,22 +40,20 @@ class http_url_connection : AppCompatActivity() {
 
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch)
 
-
         btnSearch.setOnClickListener(){
-            val city =  edtCityname.text.toString()
-            txtFajr.text = "    :    اذان صبح" + LoadPrayTime(city,"Fajr")
-            txtSunrise.text = "   :    طلوع آفتاب" + LoadPrayTime(city,"Sunrise")
-            txtDhuhr.text = "   :    اذان ظهر" + LoadPrayTime(city,"Dhuhr")
-            txtMaghrib.text = "   :    اذان مغرب" + LoadPrayTime(city,"Maghrib")
-            txtSunset.text = "   :    غروب آفتاب" + LoadPrayTime(city,"Sunset")
-            txtMidnight.text = "   :    نیمه شب" + LoadPrayTime(city,"Midnight")
+            val city  =  edtCityname.text.toString()
+            LoadPrayTimeAsync(city)
+            txtFajr.text     = FajrResult + "    :    اذان صبح"
+            txtSunrise.text  = SunriseResult + "   :    طلوع آفتاب"
+            txtDhuhr.text    = DhuhrResult + "   :    اذان ظهر"
+            txtMaghrib.text  = MaghribResult + "   :    اذان مغرب"
+            txtSunset.text   = SunsetResult + "   :    غروب آفتاب"
+            txtMidnight.text = MidnightResult + "   :    نیمه شب"
         }
     }
-
+/*
     fun LoadPrayTime(city : String,PrayTime : String) : String{
-
-        var final_result = "Null"
-
+        var final_result :String =  "--:--"
         Thread(Runnable {
             try{
                 val url=URL("https://api.aladhan.com/v1/timingsByCity?city="+ city +"&country=Iran&method=8")
@@ -74,7 +85,33 @@ class http_url_connection : AppCompatActivity() {
         }).start()
 
         return final_result
+    }
+
+ */
 
 
+    fun LoadPrayTimeAsync(city : String){
+
+        val client=AsyncHttpClient()
+        val url="http://api.aladhan.com/v1/timingsByCity?city=" + city + "&country=Iran&method=8"
+        client.get(url,object :JsonHttpResponseHandler(){
+            override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject?) {
+                super.onSuccess(statusCode, headers, response)
+                val gson=Gson()
+                val pray=gson.fromJson(response.toString(),PrayJson::class.java)
+                
+                FajrResult      = pray.data.timings.Fajr
+                SunriseResult   = pray.data.timings.Sunrise
+                DhuhrResult     = pray.data.timings.Dhuhr
+                MaghribResult   = pray.data.timings.Maghrib
+                SunsetResult    = pray.data.timings.Sunset
+                MidnightResult  = pray.data.timings.Midnight
+            }
+
+            override fun onFailure(statusCode: Int, headers: Array<out Header>?, throwable: Throwable?, errorResponse: JSONObject?) {
+                super.onFailure(statusCode, headers, throwable, errorResponse)
+                println(throwable?.message)
+            }
+        })
     }
 }

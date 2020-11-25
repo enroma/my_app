@@ -37,7 +37,7 @@
         android:id="@+id/edtCityname"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Tehran"
+        android:text="تهران"
         android:hint="نام شهر"
         android:textSize="20sp"
         android:textStyle="bold"

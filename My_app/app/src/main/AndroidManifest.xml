@@ -13,17 +13,18 @@
         android:roundIcon="@mipmap/icon_luancher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".http_url_connection">
+        <activity android:name=".AlarmDialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SQLite">
+        <activity android:name=".http_url_connection">
 
         </activity>
-        <activity android:name=".SharePreference"></activity>
+        <activity android:name=".SQLite"></activity>
+        <activity android:name=".SharePreference" />
         <activity android:name=".MoreActivity" />
         <activity android:name=".RecycleView" />
         <activity android:name=".DrawerActivity" />
