@@ -196,6 +196,42 @@
             android:layout_height="1dp"
             android:background="@color/RedColor"/>
 
+        <!-- Video Player Part -->
+        <TextView
+            android:id="@+id/txtVideoPlayer"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:drawableRight="@drawable/video_icon"
+            android:text="پخش ویدیو"
+            android:textSize="25sp"
+            android:layout_gravity="right"
+            android:gravity="right"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/RedColor"/>
+
+        <!-- Web Explorer Part -->
+        <TextView
+            android:id="@+id/txtWebEXplorer"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:drawableRight="@drawable/web_icon"
+            android:text="مرورگر اینترنت"
+            android:textSize="25sp"
+            android:layout_gravity="right"
+            android:gravity="right"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/RedColor"/>
+
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -42,16 +42,27 @@ class http_url_connection : AppCompatActivity() {
 
         btnSearch.setOnClickListener(){
             val city  =  edtCityname.text.toString()
+
             LoadPrayTimeAsync(city)
+
             txtFajr.text     = FajrResult + "    :    اذان صبح"
             txtSunrise.text  = SunriseResult + "   :    طلوع آفتاب"
             txtDhuhr.text    = DhuhrResult + "   :    اذان ظهر"
             txtMaghrib.text  = MaghribResult + "   :    اذان مغرب"
             txtSunset.text   = SunsetResult + "   :    غروب آفتاب"
             txtMidnight.text = MidnightResult + "   :    نیمه شب"
+/*
+            txtFajr.text     = LoadPrayTime(city,"Fajr") + "    :    اذان صبح"
+            txtSunrise.text  = LoadPrayTime(city,"Sunrise") + "   :    طلوع آفتاب"
+            txtDhuhr.text    = LoadPrayTime(city,"Dhuhr") + "   :    اذان ظهر"
+            txtMaghrib.text  = LoadPrayTime(city,"Maghrib") + "   :    اذان مغرب"
+            txtSunset.text   = LoadPrayTime(city,"Sunset") + "   :    غروب آفتاب"
+            txtMidnight.text = LoadPrayTime(city,"Midnight") + "   :    نیمه شب"
+ */
+
         }
     }
-/*
+
     fun LoadPrayTime(city : String,PrayTime : String) : String{
         var final_result :String =  "--:--"
         Thread(Runnable {
@@ -87,7 +98,7 @@ class http_url_connection : AppCompatActivity() {
         return final_result
     }
 
- */
+
 
 
     fun LoadPrayTimeAsync(city : String){
@@ -99,7 +110,7 @@ class http_url_connection : AppCompatActivity() {
                 super.onSuccess(statusCode, headers, response)
                 val gson=Gson()
                 val pray=gson.fromJson(response.toString(),PrayJson::class.java)
-                
+
                 FajrResult      = pray.data.timings.Fajr
                 SunriseResult   = pray.data.timings.Sunrise
                 DhuhrResult     = pray.data.timings.Dhuhr

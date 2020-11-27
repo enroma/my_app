@@ -36,6 +36,8 @@ class Main_Drawer : AppCompatActivity() {
         val txtSMS = findViewById<TextView>(R.id.txtSMS)
         val txtCamera = findViewById<TextView>(R.id.txtCamera)
         val txtPraytime = findViewById<TextView>(R.id.txtPrayTime)
+        val txtVideoplayer = findViewById<TextView>(R.id.txtVideoPlayer)
+        val txtWebExplorer = findViewById<TextView>(R.id.txtWebEXplorer)
 
 
         imgProfile.setOnClickListener(){
@@ -67,6 +69,16 @@ class Main_Drawer : AppCompatActivity() {
         txtPraytime.setOnClickListener() {
             val pray_intent = Intent(this,http_url_connection::class.java)
             startActivity(pray_intent)
+        }
+
+        txtVideoplayer.setOnClickListener() {
+            val video_intent = Intent(this,VideoPlayer::class.java)
+            startActivity(video_intent)
+        }
+
+        txtWebExplorer.setOnClickListener() {
+            val web_intent = Intent(this,WebExplorer::class.java)
+            startActivity(web_intent)
         }
 
         // --------Recycle View -------
