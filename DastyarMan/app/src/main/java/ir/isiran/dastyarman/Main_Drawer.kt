@@ -38,6 +38,7 @@ class Main_Drawer : AppCompatActivity() {
         val txtPraytime = findViewById<TextView>(R.id.txtPrayTime)
         val txtVideoplayer = findViewById<TextView>(R.id.txtVideoPlayer)
         val txtWebExplorer = findViewById<TextView>(R.id.txtWebEXplorer)
+        val txtMap = findViewById<TextView>(R.id.txtMap)
 
 
         imgProfile.setOnClickListener(){
@@ -81,6 +82,10 @@ class Main_Drawer : AppCompatActivity() {
             startActivity(web_intent)
         }
 
+        txtMap.setOnClickListener() {
+            val map_intent = Intent(this,MapsActivity::class.java)
+            startActivity(map_intent)
+        }
         // --------Recycle View -------
 
 
