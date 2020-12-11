@@ -19,7 +19,7 @@ class RecycleAdapter1(val mylist:List<ElementItems>):RecyclerView.Adapter<Recycl
         val layout = itemView.findViewById<LinearLayout>(R.id.ItemLayout)
         init {
             layout.setOnClickListener() {
-                val position = adapterPosition
+                    val position = adapterPosition
                 Toast.makeText(itemView.context, "Item number = " + position, Toast.LENGTH_LONG)
                     .show()
                 val intent = Intent(itemView.context, Detail::class.java)
