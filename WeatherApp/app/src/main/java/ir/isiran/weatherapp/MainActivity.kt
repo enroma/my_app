@@ -93,7 +93,12 @@ class MainActivity : AppCompatActivity() {
         LoadCityWeatherAsync(CityNamet)
 
         val txtDay1 = findViewById<TextView>(R.id.txtDay1)
+        val txtDay2 = findViewById<TextView>(R.id.txtDay2)
+        val txtDay3 = findViewById<TextView>(R.id.txtDay3)
+
         txtDay1.text = LoadCityForecastWeatherAsync(CityNamet,0)
+        txtDay2.text = LoadCityForecastWeatherAsync(CityNamet,1)
+        txtDay3.text = LoadCityForecastWeatherAsync(CityNamet,2)
 
 
     }
@@ -178,16 +183,16 @@ class MainActivity : AppCompatActivity() {
                         responce.append(line)
                     }
                     val objec1=JSONObject(responce.toString())
-                    val result1=objec1.getString("list")
+                    val result1=objec1.getString("list[" + Index.toString() + "]")
                     val object2=JSONObject(result1.toString())
-                    val result2=object2.getString("0")
+                    val result2=object2.getString("main")
                     val object3=JSONObject(result2.toString())
-                    val result3=object3.getString("weather")
-                    val object4=JSONObject(result3.toString())
-                    val result4=object4.getString("0")
-                    val object5=JSONObject(result4.toString())
-                    val result5=object2.getString("description")
-                    final_result = result5
+                    val result3=object3.getString("temp")
+             //      val object4=JSONObject(result3.toString())
+              //      val result4=object4.getString("temp")
+            //        val object5=JSONObject(result4.toString())
+              //      val result5=object5.getString("description")
+                    final_result = result3
                 }
 
             }
